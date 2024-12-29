@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- ListView to display items -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:dividerHeight="1dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnDeleteSelected" />
+
+    <!-- Delete selected item button -->
+    <Button
+        android:id="@+id/btnDeleteSelected"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="刪除選擇項"
+        android:contentDescription="按鈕：刪除選擇的項目"
+        app:layout_constraintBottom_toTopOf="@id/btnUpdateSelected"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Update selected item button -->
+    <Button
+        android:id="@+id/btnUpdateSelected"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="修改選擇項"
+        android:contentDescription="按鈕：修改選擇的項目"
+        app:layout_constraintBottom_toTopOf="@id/btnback"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Back button -->
+    <Button
+        android:id="@+id/btnback"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="返回"
+        android:contentDescription="按鈕：返回主頁"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
